@@ -1,0 +1,64 @@
+html {
+  font-size: 16px;
+}
+body {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 25%;
+}
+
+form {
+    border:1px solid red;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0 10%;
+  width:50vw;
+}
+
+.field__title {
+  text-align: left;
+  box-sizing: border-box;
+  width: 33%;
+  margin-left: 46.5%;
+  border-style: none;
+  color: black;
+
+  border: 1px black solid;
+}
+
+legend {
+  padding: 1%;
+  display: block;
+  font-style: oblique;
+  font-size: 1.2rem;
+}
+
+.personalinfo label {
+  width: 25%;
+  display: inline-block;
+  text-align: right;
+}
+
+.payment label {
+  width: 25%;
+  display: inline-block;
+  text-align: right;
+}
+
+#fullname, #email, #pd, #creditcard {
+  width: 32%;
+}
+select {
+  width: 32.5%;
+}
+
+/*input type date width can only be changed by absolute unit*/
+#expiredate {
+  width: 255px;
+}
+
+#submit{
+    width: 32.5%;
+    margin-bottom: 5%;
+
+}

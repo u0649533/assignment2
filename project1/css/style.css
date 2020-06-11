@@ -1,0 +1,817 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*nav bar*/
+.nav_bar {
+  background-color: rgba(255, 253, 249, 1);
+  height: 10vh;
+  width: 80%;
+  float: right;
+
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.nav_bar_leftmenu {
+  display: none;
+}
+
+.language-picker {
+  box-sizing: content-box;
+  margin-right: 2rem;
+}
+
+select {
+  border: 2px solid #aaa;
+  border-radius: 3px;
+  outline: none;
+}
+select:focus {
+  border-color: dodgerblue;
+  outline: none;
+  color: dodgerblue;
+}
+
+.language-picker label {
+  font-size: 1.5rem;
+}
+
+/**user infromation**/
+.user_info {
+  box-sizing: content-box;
+
+  height: 10vh;
+  width: 300px;
+
+  background-color: rgba(236, 236, 236, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2rem;
+}
+
+/*seetings*/
+
+.setting img {
+  height: 3rem;
+}
+
+.setting {
+  margin-right: 2rem;
+}
+
+/*right menu on nav*/
+.rightmenu {
+  width: 4rem;
+  text-align: center;
+  margin-right: 2rem;
+}
+.rightmenu::after {
+  content: "\2807";
+  font-size: 4rem;
+  color: grey;
+}
+
+.rightmenu:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.rightmenu:active {
+  transform: translateY(0px);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  color: red;
+}
+
+/*left panel*/
+
+.left_panel {
+  background-color: rgba(34, 40, 49, 0.85);
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  text-align: center;
+}
+
+img {
+  height: 6rem;
+}
+.logo_container {
+  margin: 1rem;
+  text-align: center;
+}
+
+.nav_list {
+  display: table;
+  list-style: none;
+  margin: auto;
+}
+
+li {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.nav_list_small {
+  display: none;
+}
+
+/*container box*/
+
+.container {
+  position: absolute;
+  width: 80%;
+  height: 215vh;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  background-color: rgba(236, 236, 236, 0.8);
+
+  top: 10%;
+  left: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.col {
+  background-color: rgba(255, 253, 249, 1);
+}
+
+.dashboard {
+  width: 95.5%;
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  background-color: rgba(236, 236, 236, 0.8);
+}
+
+.col_1 {
+  width: 35%;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  background-color: rgba(236, 236, 236, 0.8);
+}
+
+.col_2 {
+  width: 55%;
+  height: 50vh;
+}
+
+/*COL3*/
+.col_3 {
+  width: 55%;
+  height: 80vh;
+}
+
+
+
+.revenue_title{
+  display: inline-block;
+  font-size: 2.5rem;
+  float:left;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  color: grey;
+  text-transform: uppercase;
+}
+
+.col_3_content{
+  margin: 2rem ;
+background-color: rgba(7, 121, 228, .7);
+
+
+}
+.col3_title{
+
+  display: block;
+  text-align: center;
+  margin-top:6rem ;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 2rem;
+  color: grey;
+  
+
+}
+
+.col3_number{
+display: block;
+text-align: center;
+margin-top:2rem ;
+margin-left: 2rem;
+margin-right: 2rem;
+font-size: 3.5rem;
+
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#col3_chart{
+ margin: 2rem;
+ width: 100%;
+ max-width: 956px;
+height:auto;
+
+
+
+}
+
+.col_3_content_small{
+display: none;
+}
+
+/*COL3*/
+
+
+
+
+.col_4 {
+  width: 35%;
+  height: 80vh;
+}
+
+.col_5 {
+  width: 45%;
+  height: 60vh;
+}
+.col_6 {
+  width: 21%;
+  height: 60vh;
+}
+
+.col_7 {
+  width: 21%;
+  height: 60vh;
+}
+
+/*inner dashboard box*/
+
+.dashboard_title {
+  font-size: 3rem;
+  color: white;
+  width: 62%;
+}
+
+#date {
+  width: 20%;
+  height: 50%;
+  border-radius: 4px;
+  background-color: lightgray;
+  outline: none;
+  border: none;
+}
+
+.btn {
+  height: 50%;
+  width: 5vh;
+  background-color: rgba(7, 121, 228, 0.75);
+  border-radius: 4px;
+  border: none;
+}
+/*how to restore button after click*/
+btn:visited {
+  height: 50%;
+  width: 5vh;
+  background-color: rgba(7, 121, 228, 0.75);
+  border-radius: 4px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgba(7, 121, 228, 1);
+}
+
+btn:active {
+  box-sizing: content-box;
+  border: 2px groove rgba(7, 121, 228, 0.35);
+}
+
+.btn_refresh img {
+  height: 50%;
+}
+
+.btn_drop img {
+  height: 50%;
+}
+
+/*col_1 inner box*/
+
+.col_1_box {
+  width: 12.5vw;
+  height: 22.5vh;
+
+  background-color: rgba(255, 253, 249, 1);
+}
+.col_1_box img {
+  float: right;
+  height: 3rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.col_1_box span {
+  display: block;
+  margin-left: 2rem;
+}
+
+.col_1_box span:not(:last-child) {
+  margin-top: 2rem;
+}
+
+.col_title {
+  font-size: 2rem;
+  color: grey;
+}
+
+.col_number {
+  font-size: 3rem;
+}
+
+.col_arrow {
+  font-size: 2rem;
+}
+.col_time {
+  font-size: 2rem;
+  color: grey;
+}
+
+
+/*media query dislay col_small*/
+
+ 
+.col_small_box1 img {
+  float: right;
+  height: 3rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.col_small_box1 span {
+  display: block;
+  margin-left: 2rem;
+  margin-right: 80%;
+}
+
+.col_small_box1 span:not(:last-child) {
+  margin-top: 2rem;
+}
+
+.col_title {
+  font-size: 2rem;
+  color: grey;
+}
+
+.col_number {
+  font-size: 3rem;
+}
+
+.col_arrow {
+  font-size: 2rem;
+}
+.col_time {
+  font-size: 2rem;
+  color: grey;
+}
+
+
+/*big col in container 3 dot menu*/
+
+.three_dot_menu{
+  font-size: 2rem;
+  color: grey;
+  text-align: center;
+  float: right;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+
+
+
+}
+
+
+
+/*footer*/
+
+.footer {
+  position: absolute;
+
+  background-color: rgba(255, 253, 249, 1);
+  height: 10vh;
+  width: 80%;
+  float: right;
+  top: 230%;
+  left: 20%;
+}
+
+/*small screen view*/
+.col_small {
+  display: none;
+  text-align: center;
+}
+
+/*search bar*/
+
+.search_bar {
+  box-sizing: content-box;
+  margin-right: 40%;
+  width: 250px;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+input[type="text"] {
+  width: 100%;
+  height: 40%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  padding-left: 4rem;
+}
+
+input[type="text"]:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0.3);
+}
+
+#search_icon {
+  position: absolute;
+  height: 25%;
+  margin-left: 0.5rem;
+}
+
+.search_bar input[type="text"]:focus + img {
+  color: dodgerblue;
+  background-color: dodgerblue;
+}
+
+/*media query*/
+
+@media screen and (max-width: 1350px) {
+  .container {
+    top: 10%;
+    left: 20%;
+    width: 80%;
+    height: 650vh;
+  }
+
+  .col {
+    display: none;
+  }
+  .col_small {
+    display: block;
+    width: 94%;
+    height: 24vh;
+    background-color: rgba(255, 253, 249, 1);
+  }
+  .col_5 {
+    height: 50vh;
+  }
+
+  .col_6,
+  .col_7,
+  .col_8 {
+    height: 100vh;
+  }
+
+  .col_9,
+  .col_10 {
+    height: 80vh;
+  }
+
+  .footer {
+    width: 80%;
+    top: 660%;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 990px) and (min-width: 770px) {
+  .left_panel {
+    width: 8%;
+  }
+
+  .left_panel img {
+    height: 3rem;
+  }
+
+  .nav_list {
+    display: none;
+  }
+
+  .nav_list_small {
+    display: block;
+    list-style: none;
+  }
+
+  .nav_bar {
+    width: 92%;
+  }
+
+  .container {
+    top: 10%;
+    left: 8%;
+    width: 92%;
+  }
+
+
+
+  .col {
+    display: none;
+  }
+  .col_small {
+    display: block;
+    width: 94%;
+    height: 24vh;
+    background-color: rgba(255, 253, 249, 1);
+  }
+  .col_5 {
+    height: 50vh;
+  }
+
+  .col_6,
+  .col_7,
+  .col_8 {
+    height: 100vh;
+  }
+
+  .col_9,
+  .col_10 {
+    height: 80vh;
+  }
+
+  .footer {
+    width: 92%;
+    top: 660%;
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .nav_bar {
+    width: 100%;
+    justify-content: space-between;
+
+    align-items: center;
+  }
+
+  .language-picker {
+    display: none;
+  }
+
+  .nav_bar_leftmenu {
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard_title {
+    width: 96%;
+  }
+
+  #date {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  /*left menu appears here*/
+  #menuToggle {
+    display: block;
+    position: relative;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+
+  .left_menu li {
+    text-decoration: none;
+    color: black;
+
+    transition: color 0.3s ease;
+  }
+
+  .left_menu li:hover {
+    color: gold;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: grey;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 2.2rem;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  /*cut offffffff
+  */
+
+  .search_bar {
+    display: none;
+  }
+
+  .user_info img {
+    height: 5rem;
+  }
+
+  .user_info span {
+    display: none;
+  }
+
+  .left_panel {
+    display: none;
+  }
+
+  .container {
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 650vh;
+  }
+
+  .col {
+    display: none;
+  }
+  .col_small {
+    display: block;
+    width: 94%;
+    height: 24vh;
+    background-color: rgba(255, 253, 249, 1);
+  }
+  .col_5 {
+    height: 50vh;
+  }
+
+  .col_6,
+  .col_7,
+  .col_8 {
+    height: 100vh;
+  }
+
+  .col_9,
+  .col_10 {
+    height: 80vh;
+  }
+
+  .footer {
+    width: 100%;
+    top: 660%;
+    left: 0;
+  }
+
+/*change of col 3 content*/
+.col_3_content {
+  display:none;
+}
+
+.col_3_content_small{
+  display:block;
+  text-align: center;
+}
+.col_3_content_small span{
+display: block;
+
+}
+
+
+
+
+
+}

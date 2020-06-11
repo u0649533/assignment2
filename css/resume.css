@@ -1,0 +1,56 @@
+body {
+  background:white;
+  width: 21cm;
+  font-family: 'Necho',cursive, sans-serif;
+  box-sizing: border-box;
+  padding: 0 2rem;
+}
+page[size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+@media print {
+  body,
+  page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+
+
+h3 {
+  color: lightblue;
+}
+hr {
+  border:none;
+  border-top: 2px solid lightblue;
+  width:100%;
+ 
+}
+
+.title-name{
+    font-family: 'Tangerine',cursive, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0;
+
+
+}
+.dateperiod{
+
+float: right;
+
+
+
+}
+
+.applicant-info img{
+height:1rem;
+vertical-align: middle;
+
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>project1</title>
+  </head>
+  <body>
+    <nav class="nav_bar">
+      <div class="nav_bar_leftmenu">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a class="left_menu" href="#"><li>Dashboard</li></a>
+            <a class="left_menu" href="#"><li>Commerce</li></a>
+            <a class="left_menu" href="#"><li>Search</li></a>
+            <a class="left_menu" href="#"><li>Language</li></a>
+            <a class="left_menu" href="https://erikterwan.com/" target="_blank"
+              ><li>Show me more</li></a
+            >
+          </ul>
+        </div>
+      </div>
+
+      <div class="search_bar">
+        <input id="top_searchbar" type="text" placeholder="Search.." />
+        <img src="../img/searchicon.png" alt="search_icon" id="search_icon" />
+      </div>
+
+      <div class="language-picker js-language-picker">
+        <form action="" class="language-picker__form">
+          <label for="language-picker-select">Language</label>
+
+          <select name="language-picker-select" id="language-picker-select">
+            <option lang="de" value="deutsch">Deutsch</option>
+            <option lang="en" value="english" selected>English</option>
+            <option lang="fr" value="francais">Français</option>
+            <option lang="it" value="italiano">Italiano</option>
+            <!-- other language options -->
+          </select>
+        </form>
+      </div>
+
+      <div class="setting item">
+        <img src="../img/settings.png" alt="setting" />
+      </div>
+
+      <div class="rightmenu item"></div>
+
+      <div class="user_info">
+        <img src="../img/jungle.png" />
+        <span>Wuxin Yang</span>
+      </div>
+    </nav>
+
+    <div class="left_panel">
+      <div class="logo_container">
+        <img src="../img/jungle.png" />
+      </div>
+
+      <ul class="nav_list">
+        <li>Dashboard</li>
+        <li>Calender</li>
+        <li>Chat</li>
+        <li>Commerce</li>
+        <li>Projects</li>
+      </ul>
+
+      <ul class="nav_list_small">
+        <li><img src="../img/envelope.png" alt="email" /></li>
+        <li><img src="../img/settings.png" alt="notification " /></li>
+        <li><img src="../img/telephone.png" alt="notification " /></li>
+        <li><img src="../img/telephone.png" alt="notification " /></li>
+        <li><img src="../img/telephone.png" alt="notification " /></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="dashboard">
+        <span class="dashboard_title">Dashboard</span>
+        <input type="date" id="date" name="trip-start" />
+        <button
+          class="btn btn_refresh"
+          onClick="window.location.href=window.location.href"
+        >
+          <img src="../img/refresh.png" alt="refresh" />
+        </button>
+        <button class="btn btn_drop">
+          <img src="../img/refresh.png" alt="drop" />
+        </button>
+      </div>
+
+      <div class="col col_1">
+        <div class="col_1_box">
+          <img src="../img/envelope.png" alt="sample" /><span class="col_title"
+            >Customers</span
+          ><span class="col_number">36,254</span
+          ><span class="col_arrow" style="color: green;">&Uarr;5.27%</span
+          ><span class="col_time">Since last month</span>
+        </div>
+        <div class="col_1_box">
+          <img src="../img/envelope.png" alt="sample" />
+          <span class="col_title">Customers</span
+          ><span class="col_number">36,254</span
+          ><span class="col_arrow" style="color: red;">&darr;5.27%</span
+          ><span class="col_time">Since last month</span>
+        </div>
+        <div class="col_1_box">
+          <img src="../img/envelope.png" alt="sample" />
+          <span class="col_title">Customers</span
+          ><span class="col_number">36,254</span
+          ><span class="col_arrow" style="color: green;">&Uarr;5.27%</span
+          ><span class="col_time">Since last month</span>
+        </div>
+        <div class="col_1_box">
+          <img src="../img/envelope.png" alt="sample" />
+          <span class="col_title">Customers</span
+          ><span class="col_number">36,254</span
+          ><span class="col_arrow" style="color: green;">&Uarr;5.27%</span
+          ><span class="col_time">Since last month</span>
+        </div>
+      </div>
+      <div class="col col_2 col_option">col_2</div>
+      <div class="col col_3 col_option">
+        <div class="col3_block">
+          <span class="revenue_title">Revenue</span>
+          <span class="three_dot_menu">&#10247;</span>
+        </div>
+        <div class="col_3_content">
+          <span class="col3_title"
+            >Current Week&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Previous
+            Week</span
+          >
+          <span class="col3_number"
+            ><span class="dot"></span
+            >&nbsp;&dollar;34567&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span
+              class="dot"
+            ></span
+            >&nbsp;&dollar;34567</span
+          >
+        </div>
+        <img id="col3_chart" src="../img/linechart.png" alt="line chart" />
+      </div>
+
+      <div class="col col_4 col_option">col_1</div>
+      <div class="col col_5 col_option">col_1</div>
+      <div class="col col_6 col_option">col_1</div>
+      <div class="col col_7 col_option">col_1</div>
+
+      <div class="col_small col_1 col_small_box1">
+        <img src="../img/envelope.png" alt="sample" />
+
+        <span class="col_title">Customers</span
+        ><span class="col_number">36,254</span
+        ><span class="col_arrow" style="color: green;">&Uarr;5.27%</span
+        ><span class="col_time">Since last month</span>
+      </div>
+      <div class="col_small col_2 col_small_box1">
+        <img src="../img/envelope.png" alt="sample" />
+        <span class="col_title">Customers</span
+        ><span class="col_number">36,254</span
+        ><span class="col_arrow" style="color: green;">&Uarr;5.27%</span
+        ><span class="col_time">Since last month</span>
+      </div>
+      <div class="col_small col_3 col_small_box1">
+        <img src="../img/envelope.png" alt="sample" />
+        <span class="col_title">Customers</span
+        ><span class="col_number">&minus;36,254</span
+        ><span class="col_arrow" style="color: red;">&darr;6.27%</span
+        ><span class="col_time">Since last month</span>
+      </div>
+      <div class="col_small col_4 col_small_box1">
+        <img src="../img/envelope.png" alt="sample" />
+        <span class="col_title">Customers</span
+        ><span class="col_number">&#36;36,254</span
+        ><span class="col_arrow" style="color: green;">&Uarr;5.27%</span
+        ><span class="col_time">Since last month</span>
+      </div>
+      <div class="col_small col_5">col_5</div>
+      <div class="col_small col_6">
+        <div class="col3_block">
+          <span class="revenue_title">Revenue</span>
+          <span class="three_dot_menu">&#10247;</span>
+        </div>
+        
+        <!--col3-content do not display at screen size < 770px -->
+
+        <div class="col_3_content">
+          <span class="col3_title"
+            >Current Week&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Previous
+            Week</span
+          >
+          <span class="col3_number"
+            ><span class="dot"></span
+            >&nbsp;&dollar;34567&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span
+              class="dot"
+            ></span
+            >&nbsp;&dollar;34567</span
+          >
+        </div>
+
+
+        <!--col3-content change at screen size 770px -->
+
+        <div class="col_3_content_small">
+          <span class="col3_title_small"
+            >Current Week </span
+          >
+          <span class="col3_number_small"><span class="dot"></span
+            >&nbsp;&dollar;34567</span>
+            <span class="col3_title_small"
+            >Previous Week </span
+          >
+            <span class="col3_number_small">
+            <span
+              class="dot"
+            ></span
+            >&nbsp;&dollar;34567</span
+          >
+        </div>
+
+
+        <img id="col3_chart" src="../img/linechart.png" alt="line chart" />
+      </div>
+      <div class="col_small col_7">col_1</div>
+      <div class="col_small col_8">col_1</div>
+      <div class="col_small col_9">col_1</div>
+      <div class="col_small col_10">col_1</div>
+    </div>
+
+    <footer class="footer">
+      This footer copyright is &COPY;
+    </footer>
+  </body>
+</html>

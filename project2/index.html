@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project2</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!--title page-->
+
+    <header class="header_page">
+      <div class="header">
+        <nav class="header_nav_bar">
+          <a style="text-decoration: none;" href="#" class="brand link">
+            <img
+              style="vertical-align: middle;"
+              src="../img/jungle.png"
+              alt="brand"
+            /><span>Jungle</span></a
+          >
+          <a style="text-decoration: none;" href="#" class="brand link">
+            <span>Demos</span></a
+          >
+          <a style="text-decoration: none;" href="#" class="brand link">
+            <span>Templates</span></a
+          >
+          <a style="text-decoration: none;" href="#" class="brand link">
+            <span>Account</span></a
+          >
+          <a style="text-decoration: none;" href="#" class="brand link">
+            <span>Pages</span></a
+          >
+        </nav>
+
+        <div class="header_btn_container">
+          <button class="header_btn sign_in">Sign In</button>
+          <button class="header_btn sign_up">Sign up</button>
+        </div>
+      </div>
+
+      <div class="header_title">
+        <p class="header_title_main">Search for cheap airline tickets</p>
+        <p class="header_title_sub">Makes it easier to experience the world</p>
+      </div>
+
+      <form action="POST">
+        <div class="header_input">
+          <div class="header_input_item">
+            <label for="from">FROM</label
+            ><select required name="from" id="from" placeholder="London UK">
+              <option value="">London UK</option>
+              <option value="london">London UK</option>
+              <option value="saab">Saab</option>
+              <option value="vw">VW</option>
+              <option value="paris">Paris France</option>
+            </select>
+          </div>
+          <div class="header_input_item">
+            <label for="to">TO</label
+            ><select required name="to" id="to">
+              <option value="">London UK</option>
+
+              <option value="saab">Saab</option>
+              <option value="vw">VW</option>
+              <option value="paris">Paris France</option>
+            </select>
+          </div>
+          <div class="header_input_item">
+            <label for="depart">DEPART</label
+            ><input type="date" name="depart" id="depart" placeholder="" />
+          </div>
+          <div class="header_input_item">
+            <label for="depart">RETURN</label
+            ><input type="date" name="return" id="return" />
+          </div>
+          <div class="header_input_item header_input_last">
+            <input
+              id="header_submit"
+              type="submit"
+              value="submit"
+              placeholder="Search Flight"
+            />
+          </div>
+        </div>
+      </form>
+
+      <!--medium display-->
+      <div class="header_medium">
+        <div id="menuToggle">
+          <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+          <input type="checkbox" />
+
+          <!--
+            Some spans to act as a hamburger.
+            
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+          <ul id="menu">
+            <a href="#"><li>Demos</li></a>
+            <a href="#"><li>Templates</li></a>
+            <a href="#"><li>Account</li></a>
+            <a href="#"><li>Pages</li></a>
+            <a href="https://erikterwan.com/" target="_blank"
+              ><li>Doc/UI KIT</li></a
+            >
+          </ul>
+        </div>
+
+        <a style="text-decoration: none;" href="#" class="header_flex_item">
+          <img
+            style="vertical-align: middle;"
+            src="../img/jungle.png"
+            alt="brand"
+        /></a>
+
+        <button class="header_btn sign_in header_flex_item">Sign In</button>
+      </div>
+
+      <form class="header_form_medium" action="POST">
+        <div class="header_input_medium">
+          <div class="header_input_item header_input_item1">
+            <label for="from">FROM</label
+            ><select required name="from" id="from" placeholder="London UK">
+              <option value="">London UK</option>
+              <option value="london">London UK</option>
+              <option value="saab">Saab</option>
+              <option value="vw">VW</option>
+              <option value="paris">Paris France</option>
+            </select>
+          </div>
+          <div class="header_input_item header_input_item2">
+            <label for="to">TO</label
+            ><select required name="to" id="to">
+              <option value="">London UK</option>
+
+              <option value="saab">Saab</option>
+              <option value="vw">VW</option>
+              <option value="paris">Paris France</option>
+            </select>
+          </div>
+          <div class="header_input_item header_input_item3">
+            <label for="depart">DEPART</label
+            ><input type="date" name="depart" id="depart" placeholder="" />
+          </div>
+          <div class="header_input_item header_input_item4">
+            <label for="depart">RETURN</label
+            ><input type="date" name="return" id="return" />
+          </div>
+          <div class="header_input_item header_input_item5 header_input_last">
+            <input
+              id="header_submit"
+              type="submit"
+              value="submit"
+              placeholder="Search Flight"
+            />
+          </div>
+        </div>
+      </form>
+    </header>
+
+    <!--hot offer-->
+
+    <section class="offer">
+      <h2 class="offer_title">HOt OFFERS</h2>
+      <div class="slide_container">
+        <div class="slide_page slide_page1">
+          <div class="page page1">
+            <p class="tag">&dollar;38</p>
+            <p class="discover">Discover the trip</p>
+          </div>
+          <div class="slide_text">
+            <p class="dest">London to Rome</p>
+            <p class="trip_date">May 17, 2020</p>
+          </div>
+        </div>
+        <div class="slide_page slide_page2">
+          <div class="page page2">
+            <p class="tag">&dollar;38</p>
+            <p class="discover">Discover the trip</p>
+          </div>
+          <div class="slide_text">
+            <p class="dest">London to Rome</p>
+            <p class="trip_date">May 17, 2020</p>
+          </div>
+        </div>
+        <div class="slide_page slide_page3">
+          <div class="page page3">
+            <p class="tag">&dollar;98</p>
+            <p class="discover">Discover the trip</p>
+          </div>
+          <div class="slide_text">
+            <p class="dest">London to Rome</p>
+            <p class="trip_date">May 17, 2020</p>
+          </div>
+        </div>
+        <div class="slide_page slide_page4">
+          <div class="page page4">
+            <p class="tag">&dollar;58</p>
+            <p class="discover">Discover the trip</p>
+          </div>
+          <div class="slide_text">
+            <p class="dest">London to Rome</p>
+            <p class="trip_date">May 17, 2020</p>
+          </div>
+        </div>
+        <div class="slide_page slide_page5">
+          <div class="page page5">
+            <p class="tag">&dollar;58</p>
+            <p class="discover">Discover the trip</p>
+          </div>
+          <div class="slide_text">
+            <p class="dest">London to Rome</p>
+            <p class="trip_date">May 17, 2020</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide_btn_container">
+        <button class="slide_btn slide_forward">&#129136;</button>
+        <button class="slide_btn slide_backward">&#129138;</button>
+      </div>
+    </section>
+
+    <section class="company_info_containter">
+      <div class="feature_container">
+        <div class="feature feature1">
+          <img src="../img/jungle.png" alt="feature1" />
+          <p>hahahahahahahahahahahhahhahahah</p>
+        </div>
+        <div class="feature feature2">
+          <img src="../img/jungle.png" alt="feature1" />
+          <p>hahahahahahahahahahahhahhahahah</p>
+        </div>
+        <div class="feature feature3">
+          <img src="../img/jungle.png" alt="feature1" />
+          <p>hahahahahahahahahahahhahhahahah</p>
+        </div>
+      </div>
+     
+      <div class="company_info">
+        <h3>Whats around?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sequi,
+          numquam ipsa saepe, corporis nostrum aliquid eos maiores,
+          necessitatibus ipsam hic! Eveniet accusamus nobis vitae sapiente
+          consectetur magnam hic tempore!
+        </p>
+      </div>
+    </section>
+
+
+    <!--company info medium small display-->
+    <section class="company_info_containter_medium">
+      <div class="company_info">
+        <h3>Whats around?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sequi,
+          numquam ipsa saepe, corporis nostrum aliquid eos maiores,
+          necessitatibus ipsam hic! Eveniet accusamus nobis vitae sapiente
+          consectetur magnam hic tempore!
+        </p>
+      </div>
+      
+        <div class="feature feature1">
+          <img src="../img/jungle.png" alt="feature1" />
+          <p>hahahahahahahahahahahhahhahahah</p>
+        </div>
+        <div class="feature feature2">
+          <img src="../img/jungle.png" alt="feature1" />
+          <p>hahahahahahahahahahahhahhahahah</p>
+        </div>
+        <div class="feature feature3">
+          <img src="../img/jungle.png" alt="feature1" />
+          <p>hahahahahahahahahahahhahhahahah</p>
+        </div>
+    
+      
+    </section>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using percentage</title>
+    <link rel="stylesheet" href="./css/percentage.css" />
+  </head>
+  <body align="center">
+    <h1>Payment Form</h1>
+
+    <p>Required fields are followed by *</p>
+
+    <form action="POST">
+      <h2>Contact Information</h2>
+
+      <fieldset class="field__title">
+        <legend align="left">Title:</legend>
+
+        <input type="radio" id="ace" name="radanswer" />
+        <label for="ace">Ace</label>
+        <br />
+
+        <input type="radio" id="king" name="radanswer" />
+        <label for="king">king</label>
+        <br />
+
+        <input type="radio" id="queen" name="radanswer" />
+        <label for="queen">queen</label>
+        <br />
+        <br />
+      </fieldset>
+
+      <br />
+
+      <div class="personalinfo">
+        <label for="fullname">Name:*</label>
+        <input type="text" id="fullname" name="fullname" required size="35" />
+        <br />
+        <br />
+
+        <label for="email">Email:*</label>
+        <input type="email" id="email" name="email" required size="35" />
+        <br />
+        <br />
+
+        <label for="pd">Password:*</label>
+        <input type="password" id="pd" name="pd" required size="35" />
+        <br />
+        <br />
+      </div>
+
+      <div class="payment">
+        <h2>Payment Information</h2>
+        <label for="creditcard"> Card:</label>
+        <select name="cardtype" id="cradtype">
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+        </select>
+        <br />
+        <br />
+
+        <label for="creditcard">Card#:*</label>
+        <input
+          type="tel"
+          id="creditcard"
+          name="creditcard"
+          required
+          size="35"
+          inputmode="numeric"
+          pattern="[0-9\s]{13,19}"
+          maxlength="19"
+          autocomplete="cc-number"
+          placeholder="xxxx-xxxx-xxxx-xxxx"
+        />
+        <br />
+        <br />
+
+        <label for="expiredate">Expiration Date:*</label>
+        <input type="date" id="expiredate" name="expire" required size="35" />
+
+        <br />
+        <br />
+
+        <input id = "submit" type="submit" value="Validate the Payment" />
+      </div>
+    </form>
+  </body>
+</html>

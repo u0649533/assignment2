@@ -1,0 +1,126 @@
+html {
+  font-size: 10px;
+}
+
+.textcenter {
+  background-color: blueviolet;
+  margin: 3rem;
+  width: 20vw;
+  height: 20vh;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+.textcenter p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+/*first text centering method*/
+
+.text-firstmethod {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text-firstmethod p {
+  background-color: coral;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+}
+
+/*second text centering method*/
+.text-secondmethod {
+  position: relative;
+}
+.text-secondmethod p {
+  text-align: center;
+  background-color: coral;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*third text centering method*/
+.text-thirdmethod {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-thirdmethod p {
+  width: 20rem;
+  background-color: coral;
+
+  text-align: center;
+}
+
+/*centering elements such as section inside div    div inside div*/
+
+/*First centering method*/
+.first-elementcenter-parent {
+  position: relative;
+  background-color: greenyellow;
+  margin: 3rem;
+  width: 20vw;
+  height: 20vh;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+.first-elementcenter-parent section {
+  background: black;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/*second centering method*/
+.second-elementcenter-parent {
+  background-color: greenyellow;
+  margin: 3rem;
+  padding: 3rem;
+  width: 50vw;
+  box-sizing: border-box;
+}
+
+.second-elementcenter-parent div {
+  text-align: center;
+  width: 15rem;
+  height: 15rem;
+
+  background-color: honeydew;
+  margin: auto;
+}
+
+/*third centering method*/
+.third-elementcenter-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: greenyellow;
+  margin: 3rem;
+  padding: 3rem;
+  width: 20vw;
+  height: 20vh;
+  box-sizing: border-box;
+}
+
+.third-elementcenter-parent div {
+  text-align: center;
+  background-image:url("../img/jungle.png");
+  background-size: cover;
+
+  width:15rem;
+  height:15rem;
+}
