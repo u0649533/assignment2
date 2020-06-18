@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <title>project1</title>
   </head>
   <body>
@@ -41,38 +42,100 @@
           </ul>
         </div>
       </div>
+      <form class="nav_search_form" action="">
+        <div class="search_bar">
+          <img src="../img/searchicon.png" alt="search_icon" id="search_icon" />
+          <input id="top_searchbar" type="text" placeholder="Search.." />
+          <input id="top_search_btn" type="submit" placeholder="Search" />
+        </div>
+      </form>
 
-      <div class="search_bar">
-        <input id="top_searchbar" type="text" placeholder="Search.." />
-        <img src="../img/searchicon.png" alt="search_icon" id="search_icon" />
+      <div class="nav_right_container">
+        <select name="language-picker-select" id="language-picker-select">
+          <option lang="de" value="deutsch">Deutsch</option>
+          <option lang="en" value="english" selected>English</option>
+          <option lang="fr" value="francais">Français</option>
+          <option lang="it" value="italiano">Italiano</option>
+          <!-- other language options -->
+        </select>
+
+        <img id="settings" src="../img/settings.png" alt="setting" />
+
+        <div class="rightmenu item" id="nine_dot">
+          <div class="menu_row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu_row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu_row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="user_info">
+          <img src="../img/jungle.png" />
+          Wuxin Yang
+        </div>
       </div>
 
-      <div class="language-picker js-language-picker">
-        <form action="" class="language-picker__form">
-          <label for="language-picker-select">Language</label>
 
-          <select name="language-picker-select" id="language-picker-select">
-            <option lang="de" value="deutsch">Deutsch</option>
-            <option lang="en" value="english" selected>English</option>
-            <option lang="fr" value="francais">Français</option>
-            <option lang="it" value="italiano">Italiano</option>
-            <!-- other language options -->
-          </select>
-        </form>
-      </div>
+      <div class="nav_right_container_small">
+        <img id="search_icon_small" src="../img/searchicon.png" alt="search" />
 
-      <div class="setting item">
-        <img src="../img/settings.png" alt="setting" />
-      </div>
+        <select name="language-picker-select" id="language-picker-select">
+          <option lang="de" value="deutsch">Deutsch</option>
+          <option lang="en" value="english" selected>English</option>
+          <option lang="fr" value="francais">Français</option>
+          <option lang="it" value="italiano">Italiano</option>
+          <!-- other language options -->
+        </select>
 
-      <div class="rightmenu item"></div>
+        <img id="settings" src="../img/settings.png" alt="setting" />
 
-      <div class="user_info">
-        <img src="../img/jungle.png" />
-        <span>Wuxin Yang</span>
+        <div class="rightmenu item" id="nine_dot">
+          <div class="menu_row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu_row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu_row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="user_info">
+          <img src="../img/jungle.png" />
+        </div>
       </div>
     </nav>
 
+    <!--nav drops-->
+
+    <div class="user_drop_down">
+      <ul>
+        <li>Profile</li>
+        <li>Privacy</li>
+        <li>Account Management</li>
+        <li>Personal</li>
+      </ul>
+    </div>
+
+
+<!--nav drops-->
     <div class="left_panel">
       <div class="logo_container">
         <img src="../img/jungle.png" />
@@ -140,7 +203,15 @@
           ><span class="col_time">Since last month</span>
         </div>
       </div>
-      <div class="col col_2 col_option">col_2</div>
+      <div class="col col_2 col_option">
+        <div class="col2_block">
+          <span class="col2_title">Projecttion vs actuals</span>
+          <span class="three_dot_menu">&#10247;</span>
+        </div>
+        <div class="chart2container">
+          <canvas id="col2_chart"> </canvas>
+        </div>
+      </div>
       <div class="col col_3 col_option">
         <div class="col3_block">
           <span class="revenue_title">Revenue</span>
@@ -160,7 +231,9 @@
             >&nbsp;&dollar;34567</span
           >
         </div>
-        <img id="col3_chart" src="../img/linechart.png" alt="line chart" />
+        <div class="chart3_container">
+          <canvas id="chart3_big"></canvas>
+        </div>
       </div>
 
       <div class="col col_4 col_option">col_1</div>
@@ -197,13 +270,22 @@
         ><span class="col_arrow" style="color: green;">&Uarr;5.27%</span
         ><span class="col_time">Since last month</span>
       </div>
-      <div class="col_small col_5">col_5</div>
+      <div class="col_small col_5">
+        <div class="col2_block">
+          <span class="col2_title">Projecttion vs actuals</span>
+          <span class="three_dot_menu">&#10247;</span>
+        </div>
+       
+          <canvas id = "col5_chart"  ></canvas>
+        
+        
+      </div>
       <div class="col_small col_6">
-        <div class="col3_block">
+        <div class="col3_block_small">
           <span class="revenue_title">Revenue</span>
           <span class="three_dot_menu">&#10247;</span>
         </div>
-        
+
         <!--col3-content do not display at screen size < 770px -->
 
         <div class="col_3_content">
@@ -221,37 +303,39 @@
           >
         </div>
 
+        <!--col3-content change at screen size <770px -->
+            <div class = "col_3_small_text">
+              <span class="col3_title_small">Current Week </span>
+              <br>
+              <span class="col3_number_small"
+                ><span class="dot"></span>&nbsp;&dollar;34567</span
+              >
+            </div>
 
-        <!--col3-content change at screen size 770px -->
-
-        <div class="col_3_content_small">
-          <span class="col3_title_small"
-            >Current Week </span
-          >
-          <span class="col3_number_small"><span class="dot"></span
-            >&nbsp;&dollar;34567</span>
-            <span class="col3_title_small"
-            >Previous Week </span
-          >
-            <span class="col3_number_small">
-            <span
-              class="dot"
-            ></span
-            >&nbsp;&dollar;34567</span
-          >
-        </div>
-
-
-        <img id="col3_chart" src="../img/linechart.png" alt="line chart" />
+            <div class = "col_3_small_text">
+              <span class="col3_title_small">Previous Week </span>
+              <br>
+              <span class="col3_number_small">
+                <span class="dot"></span>&nbsp;&dollar;34567</span
+              >
+            </div>
+          <canvas id="chart3_small"></canvas>
+        
       </div>
-      <div class="col_small col_7">col_1</div>
-      <div class="col_small col_8">col_1</div>
-      <div class="col_small col_9">col_1</div>
-      <div class="col_small col_10">col_1</div>
+
+
+
+      <div class="col_small col_7">col_7</div>
+      <div class="col_small col_8">col_8</div>
+      <div class="col_small col_9">col_9</div>
+      <div class="col_small col_10">col_10</div>
     </div>
 
     <footer class="footer">
-      This footer copyright is &COPY;
+      <div class="footer_container">
+        This footer copyright is &COPY;
+      </div>
     </footer>
+    <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>

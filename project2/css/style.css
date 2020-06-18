@@ -1,3 +1,11 @@
+
+:root{
+
+--btn-bg-color: rgba(92,42,157,.7);
+--btn-bg-color-hover: rgba(92,42,157,1);
+}
+
+
 html {
   font-size: 10px;
 }
@@ -39,22 +47,51 @@ body {
 .header_btn {
   font-size: 2rem;
   color: white;
-  background-color: blueviolet;
+  background-color:var(--btn-bg-color);
   height: 4rem;
   width: 9rem;
   text-align: center;
   border-radius: 10px;
   border: none;
 }
+
+.sign_in_container{
+display:inline-block;
+width: 12rem;
+
+border-radius: 10px;
+}
+
+
+#sign_in_icon{
+  box-sizing: border-box;
+width:40px;
+float:left;
+background-color:transparent;
+padding:4px;
+border-radius:50%;
+margin: auto;
+margin-right:-7px;
+
+}
 .sign_in {
-  width: 12rem;
-  background: url("../img/user.svg") left center no-repeat;
-  background-color: transparent;
+  padding: 0;
+  box-sizing: border-box;
+width:30px;
+  width: 8rem;
+  background-image: url("../img/house.png");
+  background-color:transparent;
+  border-radius: 10px;
+  outline: none;
+}
+.sign_in_container:hover{
+  background-color: blue;
 }
 
 .header_btn:hover {
   background-color: blue;
 }
+
 
 /*header title*/
 
@@ -147,11 +184,11 @@ select:invalid,
   width: 100%;
   font-size: 2rem;
   color: white;
-  background-color: lime;
+  background-color: var(--btn-bg-color);
 }
 
 #header_submit:hover {
-  background-color: green;
+  background-color:var(--btn-bg-color-hover);
   transform: translateY(-1px);
 
 }
@@ -718,6 +755,8 @@ margin: 2rem 3.5rem;
   .company_info_containter_medium{
     display:block;
     margin-top: 7rem;
+    background-image: url("../img/infobg.jpg");
+  background-size: cover;
   }
   .feature_container{
     margin: auto;
